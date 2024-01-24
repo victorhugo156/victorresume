@@ -1,0 +1,22 @@
+:root{
+
+    --dark:hsla(159, 41%, 10%, 1);
+    --green: hsla(159, 36%, 57%, 1);
+    --lightGreen: hsla(159, 65%, 88%, 1);
+    --Lightgray: hsla(0, 0%, 89%, 1);
+    --paleWhite: hsla(0, 0%, 98%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+
+
+    --body--color: hsl(0 0% 98%);
+    --text-color-light: hsl(0 0% 98%);
+    --text-color: hsla(0, 0%, 46%, 1);
+    --title-color: hsla(0, 0%, 0%, 1);
+
+    /*fonts*/
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1.125rem;
+
+    --title-font: "Poppins", sans-serif;
+    --body-font: 'DM Sans', sans-serif;
+}
