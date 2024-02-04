@@ -22,7 +22,7 @@ btnClose.addEventListener("click", function(){
 function closeBtn(){
   wrapper.classList.toggle("active");
   //btnClose.classList.remove("active");
-  btnMenu.style.display = "flex";
+  btnMenu.style.display = "block";
   btnClose.style.display = "none";
   wrapper.style.display = "none";
 }
