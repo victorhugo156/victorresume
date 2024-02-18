@@ -4,7 +4,8 @@ GitHub Commands
 
 - git status -> It shows if there is something to be comminted or any changes in the code
 - git add . -> It will add all files into git
-- git commit -m "Say something" -> It will commint to GitHub platform our changes with a msg about what has been changed
+- git commit -m "Say something" -> It will commint to my local Repository
+- git push origin main - > It will send the changes to GitHub. The word origin is created by GitHub when you clone a project
 
 */
 
@@ -202,7 +203,7 @@ main{
   display: none;
 }
 
-section h1{
+.container-content h1{
   font-size: 5rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -218,7 +219,7 @@ section h1{
   margin-bottom: 1.68rem;
 }
 
-section h2{
+.container-content h2{
   font-weight: normal;
   font-size: 2.5rem;
 
@@ -288,11 +289,41 @@ section h2{
 }
 
 .btn h1{
+  text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: 0;
 
   margin: 0;
 }
+
+/*-------------------- EDUCATION --------------------*/
+
+.card-title{
+  width: 90%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color:var(--gray);
+
+  padding: .9rem 0;
+
+  border-radius: .5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.card-sub-title{
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.card-description{
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+
 
 /*-------------------- FOOTER --------------------*/
 .container-menu-footer{
