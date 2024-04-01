@@ -17,7 +17,7 @@
 
 <body>
 
-  <header>
+  <header class="header scroll">
     <nav class="nav-bar">
       <div class="logo">
         <h1>RESUME</h1>
@@ -41,7 +41,7 @@
       <div class="mobile-menu">
         <ul class="mobile-list">
           <li class="nav-item"><a href="#" class="nav-link">
-              <img src="#" alt="" class="profile-picture">
+              <img src="#" alt="" class="profile-picture-small">
           </li>
           <li class="nav-item"><a href="#" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
@@ -64,143 +64,205 @@
   <main>
     <!------------- Victor Information -------------->
 
-    <section>
-      <div class="picture-profile">
-        <div>picture here</div>
+    <section class="section init-hidden-off">
+      <div class="container-elements">
+          <div class="profile-picture-big">
+           <div>Heyyyy</div>
+          </div>
+
+          <div class="container-content-info">
+            <div class="container-content">
+              <h1>Victor Hugo</h1>
+              <hr class="small-line">
+              <h2>Creative <span class="skill-description">Webdeveloper</span></h2>
+              <p class="about-me-brief">Passionate professional with experience in helping companies achieve 
+                optimal business objectives by creating high-impact marketing strategies 
+                to drive pipeline, revenue, and growth. I am in the process of transitioning 
+                my career to work as a Web Developer.</p>
+            </div>
+        
+            <div class="skills">
+              <p>skills:</p>
+              <br>
+              <ul>
+                <li class="js">
+                  <img src="./icons/javascript.svg" class="skills-icon" alt="Javascript icon">
+                  <p>Javascript</p>
+                </li>
+                <li class="java">
+                  <img src="./icons/java.svg" class="skills-icon" alt="Java icon">
+                  <p>Java</p>
+                </li>
+                <li class="html">
+                  <img src="./icons/html-five.svg" class="skills-icon" alt="HTML icon">
+                  <p>HTML</p>
+                </li>
+                <li class="figma">
+                  <img src="./icons/figma.svg" class="skills-icon" alt="Figma icon">
+                  <p>Figma</p>
+                </li>
+                <li class="css">
+                  <img src="./icons/css3.svg" class="skills-icon" alt="CSS icon">
+                  <p>CSS</p>
+                </li>
+                <li class="android">
+                  <img src="./icons/android.svg" class="skills-icon" alt="Android Studio icon">
+                  <p>Android</p>
+                </li>
+                <li class="Photoshop">
+                  <img src="./icons/adobephotoshop.svg" class="skills-icon" alt="Photoshop icon">
+                  <p>Photoshop</p>
+                </li>
+                <li class="illustrator">
+                  <img src="./icons/adobeillustrator.svg" class="skills-icon" alt="Illustrator icon">
+                  <p>Illustrator</p>
+                </li>
+              </ul>
+            </div>
+        
+            <div class="btn">
+              <h1>About Me</h1>
+            </div>  
       </div>
-  
-      <div class="container-content">
-        <h1>Victor Hugo</h1>
-        <hr class="small-line">
-        <h2>Creative <span class="skill-description">Webdeveloper</span></h2>
-      </div>
-  
-      <div class="skills">
-        <p>skills:</p>
-        <ul>
-          <li class="js">
-            <img src="./icons/javascript.svg" class="skills-icon" alt="Javascript icon">
-            <p>Javascript</p>
-          </li>
-          <li class="java">
-            <img src="./icons/java.svg" class="skills-icon" alt="Java icon">
-            <p>Java</p>
-          </li>
-          <li class="html">
-            <img src="./icons/html-five.svg" class="skills-icon" alt="HTML icon">
-            <p>HTML</p>
-          </li>
-          <li class="figma">
-            <img src="./icons/figma.svg" class="skills-icon" alt="Figma icon">
-            <p>Figma</p>
-          </li>
-          <li class="css">
-            <img src="./icons/css3.svg" class="skills-icon" alt="CSS icon">
-            <p>CSS</p>
-          </li>
-          <li class="android">
-            <img src="./icons/android.svg" class="skills-icon" alt="Android Studio icon">
-            <p>Android</p>
-          </li>
-          <li class="Photoshop">
-            <img src="./icons/adobephotoshop.svg" class="skills-icon" alt="Photoshop icon">
-            <p>Photoshop</p>
-          </li>
-          <li class="illustrator">
-            <img src="./icons/adobeillustrator.svg" class="skills-icon" alt="Illustrator icon">
-            <p>Illustrator</p>
-          </li>
-        </ul>
-      </div>
-  
-      <div class="btn">
-        <h1>About Me</h1>
-      </div>
+      
     </section>
 
 
     <!------------- Section Education -------------->
 
-    <section>
-      <div class="section-title">
-        <h1>Educational</h1>
-        <div class="line"></div>
+    <section class="section init-hidden" id="education">
+      <div class="container">
+        <div class="section-title">
+          <h1>Educational</h1>
+          <div class="line"></div>
+        </div>
+  
+        <div class="card">
+          <div class="card-title-box">
+            <h2 id="current" class="card-title">Current</h2>
+            <p class="card-sub-title">AIT - Academy of Information Technology</p>
+            <p class="card-description">Bachelor’s Degree in IT (Mobile App Development)</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">2021</h2>
+            <p class="card-sub-title">Australian Pacific School</p>
+            <p class="card-description">Diploma of Social Media Marketing</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">2019</h2>
+            <p class="card-sub-title">Australian Pacific School</p>
+            <p class="card-description">Diploma of Project Management & Leadership Management</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">2016</h2>
+            <p class="card-sub-title">ComSchool</p>
+            <p class="card-description">Certificate in Digital (Analytics & AdWords)</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">2015</h2>
+            <p class="card-sub-title">Certificate in Digital Marketing and Social Media</p>
+            <p class="card-description">SP Digital</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">2009</h2>
+            <p class="card-sub-title">Bachelor’s Degree in Advertisement and Communication</p>
+            <p class="card-description">Anhembi Morumbi</p>
+          </div>
+          
+        </div>
       </div>
-
-      <div class="card">
-        <div class="card-title-box">
-          <h2 id="current" class="card-title">Current</h2>
-          <p class="card-sub-title">AIT - Academy of Information Technology</p>
-          <p class="card-description">Bachelor’s Degree in IT (Mobile App Development)</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">2021</h2>
-          <p class="card-sub-title">Australian Pacific School</p>
-          <p class="card-description">Diploma of Social Media Marketing</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">2019</h2>
-          <p class="card-sub-title">Australian Pacific School</p>
-          <p class="card-description">Diploma of Project Management & Leadership Management</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">2016</h2>
-          <p class="card-sub-title">ComSchool</p>
-          <p class="card-description">Certificate in Digital (Analytics & AdWords)</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">2015</h2>
-          <p class="card-sub-title">Certificate in Digital Marketing and Social Media</p>
-          <p class="card-description">SP Digital</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">2009</h2>
-          <p class="card-sub-title">Bachelor’s Degree in Advertisement and Communication</p>
-          <p class="card-description">Anhembi Morumbi</p>
-        </div>
-        
-      </div>
+      
     </section>
 
     <!------------- Section Experience -------------->
 
-    <section>
-      <div class="section-title">
-        <h1>Experience</h1>
-        <div class="line"></div>
+    <section class="section"  id="experience">
+      <div class="container" >
+        <div class="section-title">
+          <h1>Experience</h1>
+          <div class="line"></div>
+        </div>
+  
+        <div class="card">
+          <div class="card-title-box">
+            <h2 id="current" class="card-title">Current</h2>
+            <p class="card-sub-title">Print Force</p>
+            <p class="card-description">Print Finisher</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">Nov 2017 – Jan 2019</h2>
+            <p class="card-sub-title">FMW – Men’s Fashion Store</p>
+            <p class="card-description">Graphic Designer & Social Media Content Creator</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">Mar 2014 – Oct 2015</h2>
+            <p class="card-sub-title">Semmler Group (Insurance Company)</p>
+            <p class="card-description">Marketing Coordinator</p>
+          </div>
+  
+          <div id="past" class="card-title-box">
+            <h2 class="card-title">Jan 2007 – Oct 2013</h2>
+            <p class="card-sub-title">ATOS</p>
+            <p class="card-description">Marketing Analyst</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------- Section Portfolio -------------->
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h1>Portfolio</h1>
+          <div class="line"></div>
+        </div>
+
+        <div class="card">
+          <div class="img-bk-portfolio">
+            <img class="img-thumb" src="#" alt="">
+          </div>
+          <div class="portfolio-content">
+            <h2 class="portfolio-title">Hair Dresser Website</h2>
+            <p class="portfolio-description">
+              Passionate professional with experience in helping companies achieve optimal 
+              business objectives by creating high-impact marketing strategies to drive pipeline, 
+              revenue, and growth. I am in the process of transitioning my career to work as a Web Developer.
+            </p>
+
+            <div class="tecnologies">
+              <ul class="tech-list">
+                <li>
+                  <img src="./icons/javascript.svg" alt="" class="skills-icon">
+                </li>
+                <li>
+                  <img src="./icons/html-five.svg" alt="" class="skills-icon">
+                </li>
+                <li>
+                  <img src="./icons/css3.svg" alt="" class="skills-icon">
+                </li>
+              </ul>
+            </div>
+
+            <div class="container-btn">
+              <div class="btn">
+                <h1>WEBSITE</h1>
+              </div>
+              <div class="btn">
+                <h1>GITHUB</h1>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-title-box">
-          <h2 id="current" class="card-title">Current</h2>
-          <p class="card-sub-title">Print Force</p>
-          <p class="card-description">Print Finisher</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">Nov 2017 – Jan 2019</h2>
-          <p class="card-sub-title">FMW – Men’s Fashion Store</p>
-          <p class="card-description">Graphic Designer & Social Media Content Creator</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">Mar 2014 – Oct 2015</h2>
-          <p class="card-sub-title">Semmler Group (Insurance Company)</p>
-          <p class="card-description">Marketing Coordinator</p>
-        </div>
-
-        <div id="past" class="card-title-box">
-          <h2 class="card-title">Jan 2007 – Oct 2013</h2>
-          <p class="card-sub-title">ATOS</p>
-          <p class="card-description">Marketing Analyst</p>
-        </div>
-        
-      </div>
     </section>
 
 

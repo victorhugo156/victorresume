@@ -24,10 +24,23 @@ GitHub Commands
 - Begin to work on footer --- done
 - Begin to work on desktop version -- I will do it after finish allsections for mobile
 
----- TO DO ----
+---- TO DO 19/02 ----
 
 - Begin to work on desktop version -- on Hold. Waiting to finish mobile sections
-- Begin to work on first sections after the home for mobile
+- Begin to work on first sections after the home for mobile -- done
+
+---- TO DO 04/03  ----
+
+- Begin to work on desktop version -- on Hold. Waiting to finish mobile sections
+- Begin to work on section spaces (Try to find how to apply spaces between 
+  sections depending on the view size) -- done
+- Apply Moving effect when the section chnges --done
+
+
+---- TO DO  ----
+- Begin to work on desktop version -- on Hold. Waiting to finish mobile sections
+- Finalize to adjust the scroll efects. I need to define the size of the home section
+- Start doing the section poertfolios
 
 */
 
@@ -47,7 +60,7 @@ html{
 }
 
 body{
-  position: relative;
+  position: relative; 
   min-width: 100vw;
   min-height: 100vh;
   background-color: var(--bgPaleBlue);
@@ -57,13 +70,30 @@ body{
 
 }
 
+.header .scroll{
+  box-shadow: 0px 0px 12px 0px rgba(129,129,129,0);
+}
+
+/*
+.init-hidden{
+  opacity: 0;
+  transition: opacity 3.5s linear;
+}
+
+.init-hidden-off{
+  opacity: 1;
+}*/
+
 /*-------------------- H E A D E R --------------------*/
 
 header{
+  
   position: relative;
 }
 
 .nav-bar{
+  max-width: 1400px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +171,7 @@ header{
 }
 
 
-.profile-picture{
+.profile-picture-small{
   background-color: gray;
   width: 130px;
   height: 130px;
@@ -186,21 +216,27 @@ header{
 main{
   background-color: var(--bgPaleBlue);
 
-  padding: 5px;
+  max-width: 1400px;
+  margin: 0 auto;
 
-  /*Im using this property to align vertically*/
-  margin-block-start: 10.5rem;
+  /* padding: 5px; */
 
-  flex: 1 1 0;
+  /*Im using this property to add margin to the top*/
+  margin-block-start: 1.5rem; 
   
+}
+
+.section{
+  width: 100%;
+  padding: 10rem 0;
+}
+
+.profile-picture-big{
+  display: none;
 }
 
 .container-content{
   width: 100%;
-}
-
-.picture-profile{
-  display: none;
 }
 
 .container-content h1{
@@ -226,11 +262,14 @@ main{
   margin-bottom: 3.93rem;
 }
 
+.about-me-brief{
+  display: none;
+}
+
 .skills{
   width: 100%;
   display: flex;
-  align-items: center;
-
+  flex-direction: column;
   gap: .7rem;
 
   margin-bottom: 8rem;
@@ -275,7 +314,6 @@ main{
   height: 18px;
 }
 
-
 .btn{
   height: 3.3rem;
   width: 10.3rem;
@@ -296,10 +334,10 @@ main{
   margin: 0;
 }
 
-/*-------------------- EDUCATION --------------------*/
+/*-------------------- EDUCATION / EXPERIENCE --------------------*/
 
 .card-title{
-  width: 90%;
+  width: 30rem;
 
   text-align: center;
   text-transform: uppercase;
@@ -323,9 +361,83 @@ main{
   font-size: 1.2rem;
 }
 
+/*-------------------- PORTFOLIO --------------------*/
+
+.img-bk-portfolio{
+  background-color: #E9EEF2;
+  width: 34rem;
+  height: 30rem;
+
+  padding: 1rem;
+
+  border-radius: 5px;
+}
+
+.img-thumb{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+
+.card{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.portfolio-content{
+  width: 34rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-title{
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.portfolio-description{
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  line-height: 1.8rem;
+
+  margin-bottom: 3rem;
+}
+
+.tecnologies{
+  width: 100%;
+
+  margin-bottom: 3rem;
+}
+
+.tech-list{
+  display: flex;
+  gap: 2.5rem;
+  
+}
+
+.container-btn{
+  display: flex;
+  gap: 1.6rem;
+}
 
 
 /*-------------------- FOOTER --------------------*/
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 1rem;
+}
 .container-menu-footer{
   width: 100%;
   display: flex;
@@ -362,22 +474,40 @@ main{
   border: 2px var(--gray) solid;
 }
 
+
+
+
+
+
+
+
 /*======  MEDIA QUERIES  ======*/
 
 /* extra large devices: >= 1200px*/
 
-@media (min-width: 768px){
+/************* L A PT O P Large - 1440 x 1524 **************/
+@media (min-width: 1440px){
+
   body{
     width: 100vw;
+
+    display: flex;
+    align-items: center;
   }
+/*-------------------- HEADER --------------------*/
+
   header{
-    position: static;
+    background-color: aquamarine;
+    width: 100%;
+    /* position: static; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
   }
   .nav-bar{
-    background-color: aqua ;
+    width: 70%;
     height: 5.5rem;
-
-    padding: 2rem 4rem 2rem 4rem;
   }
 
   .logo h1{
@@ -387,7 +517,7 @@ main{
     display: none;
   }
   .container-menu-lg{
-    background-color: blanchedalmond;
+
     width: 37.5rem;
     height: 100%;
 
@@ -398,6 +528,7 @@ main{
 
     border: none;
   }
+
   .container-menu-list{
     width: 37.5rem;
     display: flex;
@@ -409,26 +540,326 @@ main{
     font-size: 2rem;
   }
 
+  /*-------------------- SECTION INFORMATION --------------------*/
 
-  /* main{
-    background-color: red;
-    width: 100vw;
-    height: 80%;
-  
+   main{
+    width: 70%;
     display: flex;
-  } */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  .picture-profile{
-    background-color: beige;
-    width: 30%;
-    height: 100%;
+    margin: 0;
+  } 
+
+  .section{
+    width: 100%;
+
+    margin-bottom: 2rem;
+  }
+
+  .container-elements{
+    width: 100%;
+    height: 53rem;
+
+    display: flex;
+    gap: 3rem;
+    
+  } 
+
+  .container-elements .profile-picture-big{
+    background-color: aqua;
+    display: block;    
+
+    width: 40%;
+  }
+
+  .container-content-info{
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
 
   .container-content{
-    width: 70%;
-    height: 100%;
-    background-color: var(--gray);
+    background-color: azure;
+    width: 100%;
+
   }
+
+  .container-content h1{
+    font-size: 8rem;
+  }
+
+  .small-line{
+    width: 13rem;
+    border: 4px black solid;
+  
+    margin-bottom: 1.68rem;
+  }
+  
+  .container-content h2{
+    font-weight: normal;
+    font-size: 4.5rem;
+  
+    margin-bottom: 3.93rem;
+  }
+
+  .container-content h2{
+    margin-bottom: 2rem;
+  }
+
+  .about-me-brief{
+    display: inline;
+
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    line-height: 2.8rem;
+
+    margin-bottom: 3rem;
+  }
+
+  .skills{
+    margin-bottom: 0;
+  }
+
+  
+.skills p{
+  font-size: 2.5rem;
+}
+
+.skills ul{
+  grid-template-columns: repeat(8, 8.0rem);
+}
+
+.skills ul li{
+  width: 7rem;
+  height: 7rem;
+
+  gap: 1.8rem;
+
+}
+
+.skills-icon{
+  width: 38px;
+  height: 38px;
+}
+
+.skills ul li p{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+  .btn{
+    display: none;
+  }
+ 
+
+  section h1{
+    font-size: 5.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  
+    margin-bottom: 2.68rem;
+  }
+
+  section h2{
+    font-weight: normal;
+    font-size: 3.5rem;
+  
+    margin-bottom: 3.93rem;
+  }
+
+  footer{
+    height: 5rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* ******************* T A B L E T ********************/
+@media (min-width: 768px){
+
+  body{
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+  }
+/*-------------------- HEADER --------------------*/
+
+  header{
+    background-color: aquamarine;
+    width: 100%;
+    /* position: static; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .nav-bar{
+    width: 70%;
+    height: 5.5rem;
+  }
+
+  .logo h1{
+    font-size: 2.5rem;
+  }
+  .container-menu-mobile{
+    display: none;
+  }
+  .container-menu-lg{
+
+    width: 37.5rem;
+    height: 100%;
+
+    position: static;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+  }
+
+  .container-menu-list{
+    width: 37.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8rem;
+  }
+
+  .nav-link{
+    font-size: 2rem;
+  }
+
+  /*-------------------- SECTION INFORMATION --------------------*/
+
+   main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+  } 
+
+  .section{
+    width: 100%;
+
+    margin-bottom: 2rem;
+  }
+
+  .container-elements{
+    width: 100%;
+    height: 43rem;
+
+    display: flex;
+    gap: 3rem;
+    
+  } 
+
+  .profile-picture-big{
+   display: none;
+  }
+
+  .container-content-info{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .container-content{
+    background-color: azure;
+    width: 100%;
+
+  }
+
+  .container-content h1{
+    font-size: 5rem;
+  }
+
+  .small-line{
+    width: 8rem;
+    border: 2px black solid;
+  
+    margin-bottom: 1.68rem;
+  }
+  
+  .container-content h2{
+    font-weight: normal;
+    font-size: 2.5rem;
+  
+    margin-bottom: 3.93rem;
+  }
+
+  .container-content h2{
+    margin-bottom: 2rem;
+  }
+
+  .about-me-brief{
+    display: inline;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    line-height: 2.8rem;
+
+    margin-bottom: 3rem;
+  }
+
+  .skills{
+    margin-bottom: 0;
+  }
+
+  
+.skills p{
+  font-size: 2rem;
+}
+
+.skills ul{
+  grid-template-columns: repeat(8, 7.0rem);
+}
+
+.skills ul li{
+  width: 7rem;
+  height: 7rem;
+
+  gap: 1.8rem;
+
+}
+
+.skills-icon{
+  width: 18px;
+  height: 18px;
+}
+
+.skills ul li p{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+
+
+
+
+
+  .btn{
+    display: none;
+  }
+ 
 
   section h1{
     font-size: 5.8rem;
