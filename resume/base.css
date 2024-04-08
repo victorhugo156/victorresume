@@ -13,8 +13,6 @@
     display: flex;
     align-items: center;
     gap: 1.2rem;
-
-    margin-bottom: 6rem;
   }
 
   .section-title h1{
@@ -37,3 +35,52 @@
     margin-bottom: 3rem;
 
   }
+
+
+/************* L A PT O P Large - 1440 x 1524 **************/
+
+  @media (min-width: 1440px){
+
+    .component-section-title{
+      background-color: aqua;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+    .component-section-title .section-title{
+      background-color: bisque;
+      width: 20rem;
+
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    .line{
+      width: 75%;
+    }
+    
+    .line-small{
+      width: 50%;
+    }
+
+    /* .section-title h1:first-child{
+      background-color: aqua;
+      width: 45rem;
+      font-size: 3.8rem;
+    } */
+ 
+  }
+
+
+  /* ******************* T A B L E T ********************/
+@media (min-width: 768px){
+  /* .section-title h1{
+    width: 25rem;
+    font-size: 2.8rem;
+  } */
+
+}

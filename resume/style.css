@@ -333,8 +333,17 @@ main{
 
   margin: 0;
 }
+/*-------------------- ABOUT ME --------------------*/
+
+.mobile-hidden{
+  display: none;
+}
 
 /*-------------------- EDUCATION / EXPERIENCE --------------------*/
+
+.container-lg-edu-expe{
+  display: none;
+}
 
 .card-title{
   width: 30rem;
@@ -479,8 +488,6 @@ footer{
 
 
 
-
-
 /*======  MEDIA QUERIES  ======*/
 
 /* extra large devices: >= 1200px*/
@@ -494,6 +501,7 @@ footer{
     display: flex;
     align-items: center;
   }
+
 /*-------------------- HEADER --------------------*/
 
   header{
@@ -658,25 +666,51 @@ footer{
   }
  
 
-  section h1{
-    font-size: 5.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-  
-    margin-bottom: 2.68rem;
-  }
+ 
 
-  section h2{
-    font-weight: normal;
-    font-size: 3.5rem;
-  
-    margin-bottom: 3.93rem;
-  }
+/*-------------------- ABOUT ME --------------------*/
 
-  footer{
-    height: 5rem;
-  }
+.mobile-hidden{
+  display: flex;
+}
+
+.container-content-aboutme{
+  width: 100%;
+  display: flex;
+}
+
+.aboutme-description{
+  width: 50%;
+
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.aboutme-info-list{
+  width: 50%;
+  padding-left: 5rem;
+
+  font-size: 1.8rem;
+  line-height: 5.8rem;
+}
+
+.aboutme-info-list span{
+  font-weight: bold;
+}
+
+/*-------------------- EDUCATIONAL / EXPERIENCE --------------------*/
+
+.container-lg-edu-expe{
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+}
+
+
+
+
+
+
 }
 
 
@@ -851,33 +885,39 @@ footer{
   font-weight: 700;
 }
 
+  /*-------------------- SECTION ABOUT ME --------------------*/
+
+.mobile-hidden{
+  display: flex;
+}
 
 
+.container-content-aboutme{
+  width: 100%;
+  display: flex;
+}
 
+.aboutme-description{
+  width: 50%;
 
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
 
-  .btn{
-    display: none;
-  }
+.aboutme-info-list{
+  width: 50%;
+  padding-left: 5rem;
+
+  font-size: 1.8rem;
+  line-height: 5.8rem;
+}
+
+.aboutme-info-list span{
+  font-weight: bold;
+}
+
+.btn{
+  display: none;
+}
  
-
-  section h1{
-    font-size: 5.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-  
-    margin-bottom: 2.68rem;
-  }
-
-  section h2{
-    font-weight: normal;
-    font-size: 3.5rem;
-  
-    margin-bottom: 3.93rem;
-  }
-
-  footer{
-    height: 5rem;
-  }
 }
