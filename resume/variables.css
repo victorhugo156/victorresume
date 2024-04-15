@@ -1,6 +1,14 @@
 :root{
   --bgPaleBlue: #F6FBFF;
-  --gray: #DEDEDE;
-  --gay2: #6b6a6a;
+  --gray: #E9EEF2;
+  --dark-gray: #333333;
+  --black:#010101;
+
+  /*Fonts*/
+
+  --title-lg: 5rem;
+  --title-md: 2.5rem;
+  --title-md2: 2rem;
+  --tittle-sm: 1.5rem;
 
 }
