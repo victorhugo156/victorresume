@@ -1,13 +1,5 @@
-/* section{
-
-  width: 100%;
-  padding: 0 0 0 0;
-  margin-bottom: 2rem;
-} */
-
-.container{
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+section{
+  padding-top: 10rem;
 }
 
 .component-section-title{
@@ -23,11 +15,13 @@
 }
 .component-section-title .section-title{
   background-color: bisque;
-  width: 20rem;
+  width: fit-content;
+      /*This is making the text stay in 1 line if we remove the text will break line*/
+  white-space: nowrap;
 
-  display: flex;
-  align-items: center;
   font-size: 2rem;
+
+  margin-right: 2rem;
 }
 
   .section-title h1{
@@ -56,7 +50,7 @@
 
   @media (min-width: 1440px){
 
-    .component-section-title{
+    .container .component-section-title{
       background-color: aqua;
       width: 100%;
 
@@ -64,23 +58,25 @@
       align-items: center;
       justify-content: space-between;
 
-      padding: 1rem 0;
       
     }
-    .component-section-title .section-title{
+    .component-section-title .section-title {
       background-color: bisque;
-      width: 55rem;
+      width: fit-content;
+      /*This is making the text stay in 1 line if we remove the text will break line*/
+      white-space: nowrap;
 
-      display: flex;
-      align-items: center;
       font-size: 2rem;
+
+      margin-right: 3rem;
     }
 
 
 
     .component-section-title .line{
-      width: 70%;
+      width: 100%
     }
+
     
   
 
@@ -96,31 +92,31 @@
   /* ******************* T A B L E T ********************/
 @media (min-width: 768px){
 
-  .component-section-title{
-    background-color: aqua;
+  .container .component-section-title{
+    background-color: red;
     width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     
-    padding: 1rem 0;
     
   }
 
   .component-section-title .section-title{
-    background-color: bisque;
-    width: 25rem;
+    background-color: gray;
+    width: fit-content;
+    /*This is making the text stay in 1 line if we remove the text will break line*/
+     white-space: nowrap;
 
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
+
+    margin-right: 3rem;
   }
 
 
   
   .line-small{
-    width: 25%;
+    width: 100%;
   }
 
 }
