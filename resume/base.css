@@ -3,7 +3,6 @@ section{
 }
 
 .component-section-title{
-  background-color: aqua;
   width: 100%;
 
   display: flex;
@@ -14,7 +13,6 @@ section{
   
 }
 .component-section-title .section-title{
-  background-color: bisque;
   width: fit-content;
       /*This is making the text stay in 1 line if we remove the text will break line*/
   white-space: nowrap;
@@ -51,7 +49,6 @@ section{
   @media (min-width: 1440px){
 
     .container .component-section-title{
-      background-color: aqua;
       width: 100%;
 
       display: flex;
@@ -61,7 +58,7 @@ section{
       
     }
     .component-section-title .section-title {
-      background-color: bisque;
+  
       width: fit-content;
       /*This is making the text stay in 1 line if we remove the text will break line*/
       white-space: nowrap;
@@ -93,7 +90,6 @@ section{
 @media (min-width: 768px){
 
   .container .component-section-title{
-    background-color: red;
     width: 100%;
 
     display: flex;
@@ -104,7 +100,7 @@ section{
   }
 
   .component-section-title .section-title{
-    background-color: gray;
+
     width: fit-content;
     /*This is making the text stay in 1 line if we remove the text will break line*/
      white-space: nowrap;

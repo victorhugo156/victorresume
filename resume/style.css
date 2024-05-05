@@ -60,6 +60,7 @@ html{
 }
 
 body{
+  background-color: var(--bgPaleBlue);
   position: relative; 
   min-width: 100vw;
   min-height: 100vh;
@@ -230,7 +231,6 @@ main{
   /*Im using this property to add margin to the top*/
   margin-block-start: 1.5rem; 
 
-  overflow-y: scroll;
  
 }
 
@@ -249,7 +249,7 @@ main{
 }
 
 .container-content h1{
-  font-size: var(--title-lg);
+  font-size: var(--title-md-bigger);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .2rem;
@@ -266,7 +266,7 @@ main{
   margin-bottom: 1.68rem;
 }
 
-.container-content h2{
+.sub-title{
   font-weight: normal;
   font-size: var(--title-md);
 
@@ -279,13 +279,29 @@ main{
   display: none;
 }
 
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.logos{
+  width: 25rem;
+  animation: 15s slide infinite linear;
+
+  margin-bottom: 3rem;
+}
+
 .skills{
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: .7rem;
 
-  margin-bottom: 8rem;
+  overflow: hidden;
 }
 
 .skills p{
@@ -296,7 +312,7 @@ main{
 
 .skills ul{
   display: grid;
-  grid-template-columns: repeat(8, 5.5rem);
+  grid-template-columns: repeat(16, 5.5rem);
   /*
   display: flex;
   gap: 1.6rem;*/
@@ -385,7 +401,7 @@ main{
 }
 
 .section-title h1{
-  font-size: var(--title-md);
+  font-size: var(--title-md2);
 
   color: var(--dark-gray);
 
@@ -403,7 +419,7 @@ main{
 .card-title{
   width: 30rem;
 
-  font-size: var(--title-md2);
+  font-size: var(--title-sm);
 
   text-align: center;
   text-transform: uppercase;
@@ -462,10 +478,12 @@ main{
 
   display: flex;
   flex-direction: column;
+
+  padding:  0 1rem;
 }
 
 .portfolio-title{
-  font-size: var(--title-md);
+  font-size: var(--title-md2);
   color: var(--black);
   font-weight: 700;
 
@@ -504,17 +522,20 @@ main{
 /*-------------------- FOOTER --------------------*/
 
 footer{
-  background-color: white;
   width: 100%;
   height: 7rem;
-  position: fixed;
-  bottom: 1rem;
+
+  bottom: .1rem;
 
 }
+.resume-active{
+  display:  none;
+}
+
 .container-menu-footer{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   padding: 1rem;
   
@@ -524,15 +545,12 @@ footer{
   height: 4rem;
 
   display: grid;
-  grid-template-columns: 5rem 5rem .3rem  12rem 4.5rem;
+  grid-template-columns: 3rem 3rem .3rem  12rem 3rem;
   grid-template-rows: auto;
   align-items: center;
   justify-content: center; 
   justify-items: center;
   column-gap: 5px;
-
-  border: 1px solid black;
-  border-radius: 25px;
 
 }
 
@@ -549,11 +567,354 @@ footer{
 }
 
 
-
-
-
-
 /*======  MEDIA QUERIES  ======*/
+
+/* ******************* T A B L E T ********************/
+@media (min-width: 770px){
+
+  body{
+    background-color: white;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+  }
+/*-------------------- HEADER --------------------*/
+
+  header{
+    width: 100%;
+    /* position: static; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+  }
+  .nav-bar{
+    width: 70%;
+    height: 5.5rem;
+  }
+
+  .logo h1{
+    font-size: var(--title-md);
+  }
+  .container-menu-mobile{
+    display: none;
+  }
+  .container-menu-lg{
+
+    width: 37.5rem;
+    height: 100%;
+
+    position: static;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+  }
+
+  .container-menu-list{
+    width: 37.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8rem;
+  }
+
+  .nav-link{
+    font-size: var(--title-md2);
+  }
+
+  /*-------------------- SECTION INFORMATION --------------------*/
+
+   main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+  } 
+
+  .section{
+    width: 100%;
+
+    margin-bottom: 2rem;
+  }
+
+  .container-elements{
+    background-color: var(--bgPaleBlue);
+    width: 100%;
+    height: 43rem;
+
+    display: flex;
+    gap: 3rem;
+
+    padding: 1rem;
+    
+  } 
+
+  .profile-picture-big{
+   display: none;
+  }
+
+  .container-content-info{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .container-content{
+    width: 100%;
+
+  }
+
+  .container-content h1{
+    font-size: 5rem;
+  }
+
+  .small-line{
+    width: 8rem;
+    border: 2px black solid;
+  
+    margin-bottom: 1.68rem;
+  }
+  
+  /* .container-content h2{
+    font-weight: normal;
+    font-size: 2.5rem;
+  
+    margin-bottom: 3.93rem;
+  } */
+
+  .container-content h2{
+    margin-bottom: 2rem;
+  }
+
+  .about-me-brief{
+    display: inline;
+
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    line-height: 2rem;
+
+    margin-bottom: 3rem;
+  }
+
+  
+
+  @keyframes slide{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos{
+    width: 25rem;
+    animation: 15s slide infinite linear;
+
+    margin-bottom: 0;
+  }
+
+  .skills{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  
+.skills p{
+  font-size: 1.5rem;
+}
+
+.skills ul{
+  grid-template-columns: repeat(16, 7.0rem);
+}
+
+.skills ul li{
+  width: 7rem;
+  height: 7rem;
+
+  gap: 1.8rem;
+
+}
+
+.skills-icon{
+  width: 18px;
+  height: 18px;
+}
+
+.skills ul li p{
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+  /*-------------------- SECTION ABOUT ME --------------------*/
+
+.mobile-hidden{
+  display: flex;
+}
+
+.container{
+  background-color: var(--bgPaleBlue);
+
+  padding: 2rem;
+
+}
+
+.wraper-content{
+  width: 100%;
+  display: flex;
+
+  padding: 5rem 0;
+}
+
+.aboutme-description{
+  width: 100%;
+}
+
+.aboutme-description p{
+
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+
+}
+
+.aboutme-info-list{
+  width: 100%;
+
+  padding-left: 5rem;
+}
+
+.list-info{
+  display: flex;
+  gap: 1rem;
+
+  margin-bottom: 5rem;
+}
+
+.list-info-title{
+  font-weight: bold;
+}
+.list-info p{
+  font-size: 1.5rem;
+
+  line-height: 1.8rem;
+  
+}
+
+
+/* .wraper-content{
+  width: 100%;
+  display: flex;
+
+  padding: 5rem 0;
+} */
+
+/* .aboutme-description{
+  width: 50%;
+
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.aboutme-info-list{
+  width: 50%;
+  padding-left: 5rem;
+
+  font-size: 1.8rem;
+  line-height: 5.8rem;
+} */
+
+.aboutme-info-list span{
+  font-weight: bold;
+}
+
+.btn{
+  display: none;
+}
+
+/*-------------------- EDUCATIONAL / EXPERIENCE --------------------*/
+
+.container-lg-edu-expe{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+
+}
+
+.wrap-content{
+  background-color: var(--bgPaleBlue);
+
+  padding: 2rem;
+}
+
+
+/*-------------------- PORTFOLIO --------------------*/
+
+.container-btn .btn{
+  display: flex;
+
+}
+
+/*-------------------- FOOTER --------------------*/
+.resume-active{
+  display:  inline-block;
+}
+
+.download-active{
+  display: none;
+}
+
+footer{
+  width: 100%;
+  height: 7rem;
+
+  bottom: .1rem;
+
+}
+
+.container-menu-footer{
+  width: 100%;
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  padding: 1rem;
+  
+}
+.btn-menu{
+  max-width: 76rem;
+  height: 4rem;
+
+  display: grid;
+  grid-template-columns: 1rem 3rem .3rem  4rem 3rem;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center; 
+  justify-items: center;
+  column-gap: 5px;
+}
+
+.btn-menu-li img{
+  width: 15px;
+  height: 15px;
+}
+}
+
+
+
+
+
 
 /* extra large devices: >= 1200px*/
 
@@ -561,6 +922,7 @@ footer{
 @media (min-width: 1440px){
 
   body{
+    background-color: white;
     width: 100vw;
 
     display: flex;
@@ -570,8 +932,8 @@ footer{
 /*-------------------- HEADER --------------------*/
 
   header{
-    background-color: aquamarine;
     width: 100%;
+    height: 9rem;
     /* position: static; */
     display: flex;
     align-items: center;
@@ -617,7 +979,7 @@ footer{
 
    main{
     width: 70%;
-    height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -625,7 +987,7 @@ footer{
 
     margin: 0;
 
-    overflow-y: scroll;
+
   } 
 
   .section{
@@ -634,44 +996,51 @@ footer{
     margin-bottom: 2rem;
   }
 
-  .container-elements{
+  section .container-elements{
     background-color: var(--bgPaleBlue);
     width: 100%;
-    height: 53rem;
+    height: auto;
 
     display: flex;
     gap: 3rem;
+
+    padding: 0;
     
   } 
 
   .container-elements .profile-picture-big{
   
     display: block;    
-    width: 40%;
+    width: auto;
+
+    padding: 2rem;
 
   }
 
   .profile-picture-big img{
-    width: 100%;
+    width: auto;
     height: auto;
   }
 
 
-  .container-content-info{
+  .container-elements .container-content-info{
     width: 70%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    padding: 2rem;
+
   }
 
-  .container-content{
+  .container-content-info .container-content{
     width: 100%;
 
+    padding-bottom: 3rem;
   }
 
-  .container-content h1{
+  .container-content .title{
     font-size: var(--title-lg);
   }
 
@@ -682,19 +1051,37 @@ footer{
     margin-bottom: 1.68rem;
   }
   
-  .container-content h2{
+ .container-content .sub-title{
     font-weight: normal;
-    font-size: var(--title-sm);
+    font-size: var(--title-md-bigger);
   
     margin-bottom: 3.93rem;
   }
 
-  .container-content h2{
-    margin-bottom: 2rem;
+  .container-content .about-me-brief{
+    font-size: var(--title-md2);
+    line-height: 3rem;
   }
 
+  @keyframes slide{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos{
+    width: 25rem;
+    animation: 15s slide infinite linear;
+
+    margin-bottom: 0;
+  }
 
   .skills{
+    width: 100%;
+    overflow: hidden;
     margin-bottom: 0;
   }
 
@@ -704,7 +1091,7 @@ footer{
 }
 
 .skills ul{
-  grid-template-columns: repeat(8, 8.0rem);
+  grid-template-columns: repeat(16, 8.0rem);
 }
 
 .skills ul li{
@@ -746,19 +1133,48 @@ footer{
 }
 
 .aboutme-description{
-  width: 50%;
+  width: 100%;
+}
 
-  font-size: 1.8rem;
+.aboutme-description p{
+
+  font-size: var(--title-md2);
   line-height: 2.8rem;
+
 }
 
 .aboutme-info-list{
-  width: 50%;
+  width: 100%;
+
+  padding-left: 5rem;
+}
+
+.list-info{
+  display: flex;
+  gap: 1rem;
+
+  margin-bottom: 3rem;
+}
+
+.list-info-title{
+  font-weight: bold;
+}
+.list-info p{
+  font-size: var(--title-md2);
+
+  line-height: 3rem;
+  
+}
+
+/* .aboutme-info-list p{
+  display: inline-block;
+  width: 100%;
+  height: 40px;
   padding-left: 5rem;
 
-  font-size: 1.8rem;
+  font-size: var(--title-md2);
   line-height: 5.8rem;
-}
+} */
 
 .aboutme-info-list span{
   font-weight: bold;
@@ -773,6 +1189,18 @@ footer{
   gap: 5rem;
 }
 
+.card-title{
+  font-size: var(--title-md2);
+}
+
+.card-sub-title{
+  font-size: 1.5rem;
+}
+
+.card-description{
+  font-size: 1.5rem;
+}
+
 
 
 
@@ -783,244 +1211,57 @@ footer{
 
 }
 
+.wraper-content-lg{
+
+  display: flex;
+  flex-direction: row;
+
+
 }
 
-
-
-
-/* ******************* T A B L E T ********************/
-@media (min-width: 768px){
-
-  body{
-    width: 100vw;
-
-    display: flex;
-    align-items: center;
-  }
-/*-------------------- HEADER --------------------*/
-
-  header{
-    background-color: aquamarine;
-    width: 100%;
-    /* position: static; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  .nav-bar{
-    width: 70%;
-    height: 5.5rem;
-  }
-
-  .logo h1{
-    font-size: 2.5rem;
-  }
-  .container-menu-mobile{
-    display: none;
-  }
-  .container-menu-lg{
-
-    width: 37.5rem;
-    height: 100%;
-
-    position: static;
-
-    display: flex;
-    align-items: center;
-
-    border: none;
-  }
-
-  .container-menu-list{
-    width: 37.5rem;
-    display: flex;
-    justify-content: flex-end;
-    gap: 8rem;
-  }
-
-  .nav-link{
-    font-size: 2rem;
-  }
-
-  /*-------------------- SECTION INFORMATION --------------------*/
-
-   main{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0;
-  } 
-
-  .section{
-    width: 100%;
-
-    margin-bottom: 2rem;
-  }
-
-  .container-elements{
-    background-color: var(--bgPaleBlue);
-    width: 100%;
-    height: 43rem;
-
-    display: flex;
-    gap: 3rem;
-
-    padding: 2rem;
-    
-  } 
-
-  .profile-picture-big{
-   display: none;
-  }
-
-  .container-content-info{
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-  }
-
-  .container-content{
-    width: 100%;
-
-  }
-
-  .container-content h1{
-    font-size: 5rem;
-  }
-
-  .small-line{
-    width: 8rem;
-    border: 2px black solid;
-  
-    margin-bottom: 1.68rem;
-  }
-  
-  .container-content h2{
-    font-weight: normal;
-    font-size: 2.5rem;
-  
-    margin-bottom: 3.93rem;
-  }
-
-  .container-content h2{
-    margin-bottom: 2rem;
-  }
-
-  .about-me-brief{
-    display: inline;
-
-    font-size: 1.8rem;
-    font-weight: 400;
-
-    line-height: 2.8rem;
-
-    margin-bottom: 3rem;
-  }
-
-  .skills{
-    margin-bottom: 0;
-  }
-
-  
-.skills p{
-  font-size: 2rem;
+.portfolio-title{
+  font-size: var(--title-md);
 }
 
-.skills ul{
-  grid-template-columns: repeat(8, 7.0rem);
+.portfolio-description{
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
-.skills ul li{
-  width: 7rem;
+/*-------------------- FOOTER --------------------*/
+
+footer{
+  width: 100%;
   height: 7rem;
 
-  gap: 1.8rem;
+  bottom: .1rem;
 
 }
 
-.skills-icon{
-  width: 18px;
-  height: 18px;
-}
-
-.skills ul li p{
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-  /*-------------------- SECTION ABOUT ME --------------------*/
-
-.mobile-hidden{
-  display: flex;
-}
-
-.container{
-  background-color: var(--bgPaleBlue);
-
-  padding: 2rem;
-
-}
-
-
-.wraper-content{
+.container-menu-footer{
   width: 100%;
   display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+.btn-menu{
+  max-width: 76rem;
+  height: 4rem;
 
-  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: 1rem 3rem .3rem  4rem 3rem;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center; 
+  justify-items: center;
+  column-gap: 5px;
 }
 
-.aboutme-description{
-  width: 50%;
-
-  font-size: 1.8rem;
-  line-height: 2.8rem;
+.btn-menu-li img{
+  width: 15px;
+  height: 15px;
 }
 
-.aboutme-info-list{
-  width: 50%;
-  padding-left: 5rem;
-
-  font-size: 1.8rem;
-  line-height: 5.8rem;
-}
-
-.aboutme-info-list span{
-  font-weight: bold;
-}
-
-.btn{
-  display: none;
-}
-
-/*-------------------- EDUCATIONAL / EXPERIENCE --------------------*/
-
-.container-lg-edu-expe{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-
-
-}
-
-.wraper-content{
-  background-color: var(--bgPaleBlue);
-
-  padding: 2rem;
-}
-
-/*-------------------- PORTFOLIO --------------------*/
-
-.container-btn .btn{
-  display: flex;
-
-}
- 
 }
