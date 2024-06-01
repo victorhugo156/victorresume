@@ -54,21 +54,16 @@ GitHub Commands
   font-size: 62.5%;
 }
 
-html{
-  width: 100vw;
-	height: 100vh;
-}
 
 body{
   background-color: var(--bgPaleBlue);
   position: relative; 
   min-width: 100vw;
-  min-height: 100vh;
 
 
   display: flex;
   flex-direction: column;
-
+  align-items: center;
 
 }
 
@@ -89,12 +84,19 @@ body{
 /*-------------------- H E A D E R --------------------*/
 
 header{
-  
+/*  width: 100%;
   position: relative;
+
+  margin: 0 3rem;*/
+
+  max-width: 1400px;
+
+  margin: 0 3rem;
+
 }
 
 .nav-bar{
-  max-width: 1400px;
+  width: 100vw;
 
   display: flex;
   justify-content: space-between;
@@ -160,7 +162,7 @@ header{
 }*/
 
 .text-menu{
- font-size: var(--title-md);
+ font-size: var(--md);
  font-weight: 900;
 
  color: var(--black);
@@ -185,7 +187,7 @@ header{
 }
 
 .mobile-list{
-  background-color: var(--bgPaleBlue);
+  background-color: #F6FBFF;
   width: 250px;
   height: 550px;
 
@@ -212,7 +214,7 @@ header{
 .nav-link{
   text-decoration: none;
 
-  font-size: var(--title-md);
+  font-size: var(--md);
   color: var(--black);
 
   font-weight: bold;
@@ -221,17 +223,15 @@ header{
 /*-------------------- MAIN --------------------*/
 
 main{
-
+  background-color: var(--bgPaleBlue);
   max-width: 1400px;
-  margin: 0 auto;
- 
-
-  margin: 0 3rem;
+  min-height: 100vh;
 
   /*Im using this property to add margin to the top*/
-  margin-block-start: 1.5rem; 
+  margin-block-start: 1.5rem;
 
- 
+  margin: 0 1rem 65rem;
+
 }
 
 
@@ -249,7 +249,7 @@ main{
 }
 
 .container-content h1{
-  font-size: var(--title-md-bigger);
+  font-size: var(--lg);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .2rem;
@@ -260,15 +260,15 @@ main{
 }
 
 .small-line{
-  width: 9rem;
-  border: 3px var(--dark-gray) solid;
+  width: 8.5rem;
+  border: 2px var(--dark-gray) solid;
 
-  margin-bottom: 1.68rem;
+  margin-bottom: 1rem;
 }
 
 .sub-title{
   font-weight: normal;
-  font-size: var(--title-md);
+  font-size: var(--md);
 
   color: var(--black);
 
@@ -305,7 +305,7 @@ main{
 }
 
 .skills p{
-  font-size: var(--title-sm);
+  font-size: var(--light);
   color: var(--black);
   font-weight: 700;
 }
@@ -331,7 +331,7 @@ main{
 }
 
 .skills ul li p{
-  font-size: var(--title-sm);
+  font-size: var(--extra-light);
 
   color: var(--black);
   font-weight: 700;
@@ -358,31 +358,13 @@ main{
   color: white;
 }
 
-/*BTN animation*/
 
-.btn:before{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
 
-  width: 0;
-  height: 0;
 
-  border-top: 2px solid red;
-
-  animation: border-top 3s infinite alternate;
-
-}
-
-@keyframes border-top{
-  0%   {width: 0px;   height: 0px;}
-  100% {width: 200px; height: 0px;}
-}
 
 .btn h1{
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: var(--regular);
   letter-spacing: 0;
 
   margin: 0;
@@ -401,11 +383,11 @@ main{
 }
 
 .section-title h1{
-  font-size: var(--title-md2);
+  font-size: var(--md);
 
   color: var(--dark-gray);
 
-  letter-spacing: 1rem;
+  letter-spacing: .5rem;
 }
 
 .wraper-content{
@@ -419,7 +401,7 @@ main{
 .card-title{
   width: 30rem;
 
-  font-size: var(--title-sm);
+  font-size: var(--light);
 
   text-align: center;
   text-transform: uppercase;
@@ -435,17 +417,19 @@ main{
 
 .card-sub-title{
   font-weight: 900;
-  font-size: var(--title-sm);
+  font-size: var(--light);
   color: var(--black);
 }
 
 .card-description{
   font-weight: 400;
-  font-size: var(--tile-sm);
+  font-size: var(--light);
   color: var(--back);
 }
 
 /*-------------------- PORTFOLIO --------------------*/
+
+#portfolio
 
 .img-bk-portfolio{
   background-color: #E9EEF2;
@@ -483,7 +467,7 @@ main{
 }
 
 .portfolio-title{
-  font-size: var(--title-md2);
+  font-size: var(--regular);
   color: var(--black);
   font-weight: 700;
 
@@ -492,10 +476,10 @@ main{
 }
 
 .portfolio-description{
-  font-size: var(--title-sm);
+  font-size: var(--light);
   font-weight: 400;
 
-  line-height: 1.8rem;
+  line-height: 2.5rem;
 
   margin-bottom: 3rem;
 }
@@ -520,51 +504,129 @@ main{
 
 
 /*-------------------- FOOTER --------------------*/
-
 footer{
-  width: 100%;
-  height: 7rem;
+  background-color: var(--bgPaleBlue);
+  max-width: 1400px;
 
-  bottom: .1rem;
+  height: 30rem;
+
+  position: fixed;
+  bottom: 0;
+
+  margin: 0 3rem 0 3rem;
+
+  z-index: -1;
 
 }
-.resume-active{
-  display:  none;
-}
 
-.container-menu-footer{
-  width: 100%;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  padding: 1rem;
+
+.container-footer-content{
   
-}
-.btn-menu{
-  max-width: 76rem;
-  height: 4rem;
-
-  display: grid;
-  grid-template-columns: 3rem 3rem .3rem  12rem 3rem;
-  grid-template-rows: auto;
-  align-items: center;
-  justify-content: center; 
-  justify-items: center;
-  column-gap: 5px;
+  width: 100%;
+  height: 100%;
 
 }
 
-.btn-menu-li{
-  font-size: 1rem;
+.wrap-footer-content{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1rem 10.2rem 10rem 10.2rem;
+
+  opacity: 0;
+  transition: 250ms ease-in;
+
 }
 
-.btn-menu .actived{
-  display: none;
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0px);
+  transition: all 2s;
 }
 
-.vertical-line{
-  border: 2px var(--gray) solid;
+.footer-say-hello{
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+
+  width:30rem;
+  font-size: var(--md);
+
+  margin-bottom: 7rem;
 }
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 2s;
+}
+
+.footer-say-hello h1{
+
+  color: var(--dark-gray);
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+
+.footer-links{
+  height: 14rem;
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+
+  gap: 3.7rem;
+}
+
+.container-media{
+  display: flex;
+
+  gap: 1.5rem;
+
+}
+
+.contact-email{
+  font-size: var(--regular);
+  font-weight: bold;
+
+  color: var(--dark-gray);
+
+  text-decoration: none;
+}
+
+.container-media{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.media-link{
+  display: flex;
+
+  text-decoration: none;
+
+  color: var(--dark-gray);
+
+  gap: 1rem;
+}
+
+.media p{
+  font-size: var(--light);
+}
+
+.footer-endline{
+display: none;
+}
+
+
 
 
 /*======  MEDIA QUERIES  ======*/
@@ -596,13 +658,12 @@ footer{
   }
 
   .logo h1{
-    font-size: var(--title-md);
+    font-size: var(--lg);
   }
   .container-menu-mobile{
     display: none;
   }
   .container-menu-lg{
-
     width: 37.5rem;
     height: 100%;
 
@@ -622,7 +683,7 @@ footer{
   }
 
   .nav-link{
-    font-size: var(--title-md2);
+    font-size: var(--regular);
   }
 
   /*-------------------- SECTION INFORMATION --------------------*/
@@ -634,7 +695,7 @@ footer{
     align-items: center;
     justify-content: center;
 
-    margin: 0;
+   /* margin: 0 1rem calc(100vh - 8rem); */
   } 
 
   .section{
@@ -646,7 +707,7 @@ footer{
   .container-elements{
     background-color: var(--bgPaleBlue);
     width: 100%;
-    height: 43rem;
+    height: 50rem;
 
     display: flex;
     gap: 3rem;
@@ -674,11 +735,16 @@ footer{
   }
 
   .container-content h1{
-    font-size: 5rem;
+    font-size: var(--xl);
+  }
+  .container-content h2{
+    font-size: var(--lg);
+
+    margin-bottom: 2rem;
   }
 
   .small-line{
-    width: 8rem;
+    width: 13.5rem;
     border: 2px black solid;
   
     margin-bottom: 1.68rem;
@@ -691,19 +757,14 @@ footer{
     margin-bottom: 3.93rem;
   } */
 
-  .container-content h2{
-    margin-bottom: 2rem;
-  }
 
   .about-me-brief{
     display: inline;
 
-    font-size: 1.5rem;
+    font-size: var(--regular);
     font-weight: 400;
 
-    line-height: 2rem;
-
-    margin-bottom: 3rem;
+    line-height: 3rem;
   }
 
   
@@ -732,7 +793,7 @@ footer{
 
   
 .skills p{
-  font-size: 1.5rem;
+  font-size: var(--regular);
 }
 
 .skills ul{
@@ -753,7 +814,7 @@ footer{
 }
 
 .skills ul li p{
-  font-size: .8rem;
+  font-size: var(--extra-light);
   font-weight: 700;
 }
 
@@ -783,8 +844,8 @@ footer{
 
 .aboutme-description p{
 
-  font-size: 1.5rem;
-  line-height: 1.8rem;
+  font-size: var(--regular);
+  line-height: 3rem;
 
 }
 
@@ -805,7 +866,7 @@ footer{
   font-weight: bold;
 }
 .list-info p{
-  font-size: 1.5rem;
+  font-size: var(--regular);
 
   line-height: 1.8rem;
   
@@ -861,58 +922,185 @@ footer{
 
 
 /*-------------------- PORTFOLIO --------------------*/
+/*
+#portfolio{
+  
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
+}
+
+
+@keyframes fade {
+  from{
+opacity: 1;
+  }
+  to{
+opacity: 0;
+  }
+  0%{
+opacity: 1;
+  }
+  50%{
+opacity: 1;
+  }
+  100%{
+opacity: 0;
+  }
+
+}*/
+
+.portfolio-title{
+  font-size: var(--md);
+  color: var(--black);
+  font-weight: 700;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.portfolio-description{
+  font-size: var(--regular);
+  font-weight: 400;
+
+  line-height: 2.8rem;
+
+  margin-bottom: 3rem;
+}
 
 .container-btn .btn{
   display: flex;
 
 }
 
-/*-------------------- FOOTER --------------------*/
-.resume-active{
-  display:  inline-block;
-}
 
-.download-active{
-  display: none;
-}
+
+/*-------------------- FOOTER --------------------*/
 
 footer{
-  width: 100%;
-  height: 7rem;
+  background-color: var(--bgPaleBlue);
+  width: 70%;
+  height: 80rem;
 
-  bottom: .1rem;
+  position: fixed;
+  bottom: 0;
+
+  margin: 0 auto;
 
 }
 
-.container-menu-footer{
-  width: 100%;
-  display: flex;
-  justify-content:right;
-  align-items: center;
-  padding: 1rem;
+
+
+.container-footer-content{
   
-}
-.btn-menu{
-  max-width: 76rem;
-  height: 4rem;
+  width: 100%;
+  height: 100%;
 
-  display: grid;
-  grid-template-columns: 1rem 3rem .3rem  4rem 3rem;
-  grid-template-rows: auto;
-  align-items: center;
-  justify-content: center; 
-  justify-items: center;
-  column-gap: 5px;
 }
 
-.btn-menu-li img{
-  width: 15px;
-  height: 15px;
+.wrap-footer-content{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 55rem 10.2rem 30rem 10.2rem;
+
+  opacity: 0;
+  transition: 250ms ease-in;
+
 }
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(50px);
+  transition: all 2s;
+}
+
+.footer-say-hello{
+  display: flex;
+  flex-direction: column;
+
+  width:30rem;
+  font-size: var(--lg);
+}
+
+.footer-say-hello h1{
+
+  color: var(--dark-gray);
+
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 
+.footer-links{
+  height: 14rem;
 
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+
+  gap: 3.7rem;
+}
+
+.container-media{
+  display: flex;
+
+  gap: 1.5rem;
+
+}
+
+.contact-email{
+  font-size: var(--regular);
+  font-weight: bold;
+
+  color: var(--dark-gray);
+
+  text-decoration: none;
+}
+
+.container-media{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.media-link{
+  display: flex;
+
+  text-decoration: none;
+
+  color: var(--dark-gray);
+
+  gap: 1rem;
+}
+
+.media p{
+  font-size: var(--light);
+}
+
+.footer-endline{
+  width: 80%;
+
+  margin: 0 auto
+}
+
+.footer-line{
+
+  margin-top: 25rem;
+
+  padding-top: 2rem;
+
+  border-top: 1px var(--dark-gray) solid;
+}
+
+.footer-line p{
+  font-size: var(--light);
+}
+
+}
 
 
 
@@ -933,7 +1121,7 @@ footer{
 
   header{
     width: 100%;
-    height: 9rem;
+    height: 15rem;
     /* position: static; */
     display: flex;
     align-items: center;
@@ -946,7 +1134,7 @@ footer{
   }
 
   .logo h1{
-    font-size: var(--title-lg);
+    font-size: var(--xl);
   }
   .container-menu-mobile{
     display: none;
@@ -972,7 +1160,7 @@ footer{
   }
 
   .nav-link{
-    font-size: var(--title-md);
+    font-size: var(--md);
   }
 
   /*-------------------- SECTION INFORMATION --------------------*/
@@ -985,15 +1173,19 @@ footer{
     align-items: center;
     justify-content: center;
 
-    margin: 0;
-
-
+    margin: 0 1rem 119rem;
   } 
+
 
   .section{
     width: 100%;
 
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .section-title h1{
+    font-size: var(--lg);
+
   }
 
   section .container-elements{
@@ -1009,7 +1201,6 @@ footer{
   } 
 
   .container-elements .profile-picture-big{
-  
     display: block;    
     width: auto;
 
@@ -1041,7 +1232,7 @@ footer{
   }
 
   .container-content .title{
-    font-size: var(--title-lg);
+    font-size: var(--xl);
   }
 
   .small-line{
@@ -1053,14 +1244,14 @@ footer{
   
  .container-content .sub-title{
     font-weight: normal;
-    font-size: var(--title-md-bigger);
+    font-size: var(--lg);
   
     margin-bottom: 3.93rem;
   }
 
   .container-content .about-me-brief{
-    font-size: var(--title-md2);
-    line-height: 3rem;
+    font-size: var(--md);
+    line-height: 4rem;
   }
 
   @keyframes slide{
@@ -1087,7 +1278,7 @@ footer{
 
   
 .skills p{
-  font-size: 2.5rem;
+  font-size: var(--md);
 }
 
 .skills ul{
@@ -1108,7 +1299,7 @@ footer{
 }
 
 .skills ul li p{
-  font-size: 1.3rem;
+  font-size: var(--extra-light);
   font-weight: 700;
 }
 
@@ -1137,9 +1328,8 @@ footer{
 }
 
 .aboutme-description p{
-
-  font-size: var(--title-md2);
-  line-height: 2.8rem;
+  font-size: var(--md);
+  line-height: 4rem;
 
 }
 
@@ -1160,7 +1350,7 @@ footer{
   font-weight: bold;
 }
 .list-info p{
-  font-size: var(--title-md2);
+  font-size: var(--md);
 
   line-height: 3rem;
   
@@ -1190,21 +1380,43 @@ footer{
 }
 
 .card-title{
-  font-size: var(--title-md2);
+  font-size: var(--md);
 }
 
 .card-sub-title{
-  font-size: 1.5rem;
+  font-size: var(--regular);
 }
 
 .card-description{
-  font-size: 1.5rem;
+  font-size: var(--regular);
 }
 
 
 
 
 /*-------------------- PORTFOLIO --------------------*/
+
+
+
+/*--- Footer Reveal Efect ---
+#portfolio{
+  
+  animation: fade linear both;
+  animation-timeline: view();
+  animation-range: entry 160% cover 80%;
+}
+
+
+@keyframes fade {
+  from{
+opacity: 1;
+  }
+  to{
+opacity: 0;
+  }
+
+}*/
+/*--------------------------------------------------*/
 
 .container-btn .btn{
   display: flex;
@@ -1213,55 +1425,169 @@ footer{
 
 .wraper-content-lg{
 
-  display: flex;
-  flex-direction: row;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
 }
 
 .portfolio-title{
-  font-size: var(--title-md);
+  font-size: var(--lg);
 }
 
 .portfolio-description{
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: var(--regular);
+  line-height: 3rem;
 }
+
+
+
 
 /*-------------------- FOOTER --------------------*/
 
+/* .hidden{
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(60%);
+  transition: all 5s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 2s;
+} */
+
 footer{
-  width: 100%;
-  height: 7rem;
 
-  bottom: .1rem;
+  width: 70%;
+  height: 200rem;
+
+  position: fixed;
+  bottom: 0;
+
+  z-index: -1;
+
+  margin: 0 3rem;
+
 
 }
 
-.container-menu-footer{
-  width: 100%;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  padding: 1rem;
+.container-footer-content{
   
-}
-.btn-menu{
-  max-width: 76rem;
-  height: 4rem;
+  width: 100%;
+  height: 100%;
 
-  display: grid;
-  grid-template-columns: 1rem 3rem .3rem  4rem 3rem;
-  grid-template-rows: auto;
-  align-items: center;
-  justify-content: center; 
-  justify-items: center;
-  column-gap: 5px;
 }
 
-.btn-menu-li img{
-  width: 15px;
-  height: 15px;
+ .wrap-footer-content{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:flex-end;
+
+  padding: 135rem 10.2rem 30rem 10.2rem;
+
+  opacity: 0;
+  transition: 250ms ease-in;
+
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(10px);
+  transition: all 2s;
+}
+
+.footer-say-hello{
+  display: flex;
+  flex-direction: row;
+
+  width:60rem;
+  font-size: var(--xl);
+
+  gap: 2.4rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+.footer-say-hello h1{
+
+  color: var(--dark-gray);
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+
+.footer-links{
+  height: 14rem;
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3.7rem;
+}
+
+.container-media{
+  display: flex;
+  flex-direction: row;
+
+  gap: 1.5rem;
+
+}
+
+.contact-email{
+  font-size: var(--md);
+  font-weight: bold;
+  letter-spacing: 0.18rem;
+
+  color: var(--dark-gray);
+
+  text-decoration: none;
+}
+
+.container-media{
+  display: flex;
+}
+
+
+.media-link{
+  display: flex;
+
+  text-decoration: none;
+
+  color: var(--dark-gray);
+
+  gap: 1rem;
+}
+
+.media p{
+  font-size: var(--light);
+}
+
+.footer-endline{
+  width: 80%;
+
+  margin: 0 auto
+}
+
+.footer-line{
+
+  margin-top: 25rem;
+
+  padding: 2rem;
+
+  border-top: 1px var(--dark-gray) solid;
+}
+
+.footer-line p{
+  font-size: var(--light);
 }
 
 }

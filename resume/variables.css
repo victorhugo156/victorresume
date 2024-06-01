@@ -6,10 +6,11 @@
 
   /*Fonts*/
 
-  --title-lg: 7rem;
-  --title-md-bigger: 4rem;
-  --title-md: 2.5rem;
-  --title-md2: 2rem;
-  --tittle-sm: 1.5rem;
+  --xl: 6.875rem;
+  --lg: 3.75rem;
+  --md: 2.375rem;
+  --regular: 1.875rem;
+  --light: 1.625rem;
+  --extra-light: 1rem;
 
 }

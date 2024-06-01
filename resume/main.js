@@ -3,42 +3,43 @@
 const btnMenu = document.querySelector(".menu-icon");
 let btnClose = document.querySelector(".btn-close");
 const wrapper = document.querySelector(".mobile-list");
-const description = document.querySelector(".container-content");
+const wraperMain = document.querySelector(".test");
+const fader = document.querySelector(".wrap-footer-content");
+const element = document.querySelector(".hidden")
 
-/*
-const observer = new IntersectionObserver((entries)=>{
-  console.log(entries)
- 
-  Array.from(entries).forEach( entry =>{
-      entries.intersectionRatio
-      entry.target.classList.add('init-hidden-off')
- 
-  }, {
-    threshold: [0, .5, 1]
+const appearOptions = {
+  threshold: 0.2,
+  // rootMargin: "-955px"
+
+  // rootMargin: "-395px"
+};
+
+const apperOnScroll = new IntersectionObserver((entries)=>{
+
+  entries.forEach((entry)=>{
+    if(!entry.isIntersecting){
+      // entry.target.classList.remove('show');
+      fader.classList.add('show');
+      console.log("This is the if: " + entry)
+    }else{
+      // entry.target.classList.add('show');
+      // apperOnScroll.unobserve(entry.target);
+      fader.classList.remove('show');
+      console.log("This is the else" + entry)
+    }
   })
-  
-})
-
-Array.from(document.querySelectorAll('.init-hidden')).forEach(element =>{
-  observer.observe(element)
-  
-})*/
-
-const header = document.querySelector('.header')
-const navHeight = header.offsetHeight
-console.log(navHeight)
-
-function changeHeaderWhenScroll(){
-  if(window.scrollY >= navHeight){
-    header.classList.add('scroll')
-    console.log("I'm into the if")
-  }else{
-    header.classList.remove('scroll')
-    console.log("Im into the else")
-  }
-}
+}, appearOptions);
 
 
+  apperOnScroll.observe(wraperMain);
+
+
+
+
+
+
+
+//Open & Close Menu Mobile
 btnMenu.addEventListener("click", function(){
   wrapper.classList.toggle("active");
   //wrapper.classList.add("active");
