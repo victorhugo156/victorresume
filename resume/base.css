@@ -1,7 +1,7 @@
-section{
+/* section{
   padding-top: 10rem;
 
-}
+} */
 
 .component-section-title{
   width: 100%;
@@ -47,7 +47,7 @@ section{
 
 /************* L A PT O P Large - 1440 x 1524 **************/
 
-  @media (min-width: 1440px){
+  /* @media (min-width: 1440px){
 
     .container .component-section-title{
       width: 100%;
@@ -60,9 +60,9 @@ section{
     }
     .component-section-title .section-title {
   
-      width: fit-content;
+      width: fit-content; */
       /*This is making the text stay in 1 line if we remove the text will break line*/
-      white-space: nowrap;
+      /* white-space: nowrap;
 
       font-size: 2rem;
 
@@ -73,7 +73,7 @@ section{
 
     .component-section-title .line{
       width: 100%
-    }
+    } */
 
     
   
@@ -88,7 +88,7 @@ section{
 
 
   /* ******************* T A B L E T ********************/
-@media (min-width: 768px){
+/* @media (min-width: 768px){
 
   .container .component-section-title{
     width: 100%;
@@ -98,13 +98,13 @@ section{
     justify-content: space-between;
     
     
-  }
+  } */
 
-  .component-section-title .section-title{
+  /* .component-section-title .section-title{
 
-    width: fit-content;
+    width: fit-content; */
     /*This is making the text stay in 1 line if we remove the text will break line*/
-     white-space: nowrap;
+     /* white-space: nowrap;
 
 
     margin-right: 3rem;
@@ -114,4 +114,4 @@ section{
     width: 100%;
   }
 
-}
+} */
