@@ -955,7 +955,7 @@ display: none;
 
 footer{
   max-width: 96.6%;
-  height: 100vh;
+  height: auto;
 
   bottom: 0; 
 }
@@ -1441,7 +1441,7 @@ footer{
 
 footer{
   max-width: 1400px;
-  height: 80vh;
+  height: auto;
 
   bottom: 0; 
 
