@@ -515,12 +515,32 @@ dialog{
 }
 
 .portfolio-description{
-  font-size: var(--light);
+  font-size: var(--md);
   font-weight: 400;
 
   line-height: 2.5rem;
 
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+}
+
+.portfolio-description-container-challenges{
+  margin-bottom: 5rem;
+}
+
+.portfolio-description-challenges-title{
+  font-size: var(--md);
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  padding-bottom: 1rem;
+}
+
+.challenges-list li p{
+  font-size: var(--regular);
+  font-weight: 400;
+
+  line-height: 2.5rem;
+
 }
 
 .tecnologies{
